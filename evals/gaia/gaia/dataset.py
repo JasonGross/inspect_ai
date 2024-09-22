@@ -18,8 +18,6 @@ def gaia_dataset(
     # use user cache dir for dataset
     GAIA_DATASET_LOCATION = Path(user_cache_dir("gaia_eval")) / "GAIA"
 
-    shutil.rmtree(GAIA_DATASET_LOCATION, True)
-
     # download dataset if required
     if not os.path.exists(GAIA_DATASET_LOCATION):
         GAIA_DATASET_LOCATION.mkdir(parents=True, exist_ok=True)
