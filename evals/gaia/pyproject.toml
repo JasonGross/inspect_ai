@@ -1,0 +1,22 @@
+[project]
+name = "gaia"
+version = "0.1"
+description = "GAIA Evaluation"
+requires-python = ">=3.10"
+authors = [{name = "UK AISI"}]
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.entry-points.inspect_ai]
+gaia = "gaia.task"
+
+
