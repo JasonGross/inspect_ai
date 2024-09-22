@@ -59,7 +59,6 @@ def gaia_dataset(
         return sample
 
     # read dataset
-    print(GAIA_DATASET_LOCATION)
     dataset = hf_dataset(
         GAIA_DATASET_LOCATION.as_posix(),
         name=subset,
