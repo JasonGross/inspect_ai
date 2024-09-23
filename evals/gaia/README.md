@@ -3,10 +3,10 @@ This is an inspect-native implementation of [the GAIA (General AI Assistants)](h
 
 ## Prerequisites
 
-1) **Python Dependencies** Install the Python dependencies for the GAIA task with:
+1) **Installation** Install the `gaia` Python package with:
 
    ```
-   pip install -r requirements.txt
+   pip install git+https://github.com/UKGovernmentBEIS/inspect_ai#subdirectory=evals/gaia
    ```
 
 2) **Docker Engine** The GAIA task uses [tool calling](https://inspect.ai-safety-institute.org.uk/tools.html) to enable the model to execute bash commands. Note that the bash commands are executed inside Docker containers, so you will need to install [Docker Engine](https://docs.docker.com/engine/install/) in order to run the evaluation.
@@ -30,14 +30,14 @@ This is an inspect-native implementation of [the GAIA (General AI Assistants)](h
 After fulfiling the prerequisites, run the GAIA task aginst various models with:
 
 ```bash
-$ inspect eval gaia.py --model openai/gpt-4o
-$ inspect eval gaia.py --model google/gemini-1.5-pro
+$ inspect eval gaia/gaia --model openai/gpt-4o
+$ inspect eval gaia/gaia --model google/gemini-1.5-pro
 ```
 
 You might want to limit the number of samples evaluated for initial experimentation:
 
 ```bash
-$ inspect eval gaia.py --model openai/gpt-4o --limit 5
+$ inspect eval gaia/gaia --model openai/gpt-4o --limit 5
 ```
 
 ## Development
